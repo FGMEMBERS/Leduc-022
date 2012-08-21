@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- <PropertyList include="leduc022-jsbsim-cnf.xml"> -->
+<PropertyList include="leduc022-yasim-cnf.xml">
+
+  <sim>
+
+    <description>Leduc 022 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+
+    <rating>
+      <FDM type="int">     0 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 0 </cockpit>
+      <model type="int">   3 </model>
+    </rating>
+
+  </sim>
+
+</PropertyList>
+
