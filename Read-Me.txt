@@ -6,8 +6,8 @@ English/Français
 A little history
 ================
 
-Saab Jas 39 Gripen
-===================
+Leduc 022
+=========
 
 Manufacturer                  : 
 Type                          : 
@@ -29,9 +29,10 @@ Thanks
 
 ===============
 BARANGER Emmanuel
-August, 12, 2007. 
+November, 11, 2008. 
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr
 
 
@@ -41,8 +42,8 @@ embaranger@free.fr
 Un peu d'histoire
 =================
 
-Saab Jas 39 Gripen
-===================
+Leduc 022
+=========
 
 Constructeur                  :
 Type                          :
@@ -65,7 +66,8 @@ Remerciements
 
 ===============
 BARANGER Emmanuel
-12 Août 2007.
+11 Novembre 2008.
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr

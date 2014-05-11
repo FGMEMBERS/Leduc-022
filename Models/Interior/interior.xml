@@ -15,18 +15,12 @@
     <object-name>intverriere</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Leduc-022/Models/Effects/Glass/glass</inherits-from>
     <object-name>intverriere</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>intverriere</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Pilote -->
   <model>
     <path>Aircraft/Leduc-022/Models/Pilot/pilot.xml</path>
@@ -48,9 +42,23 @@
   </model>
 
   <animation>
+    <type>pick</type>
+    <object-name>intverriere</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>translate</type>
     <object-name>intverriere</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0.0 </dep></entry>
       <entry><ind> 1 </ind><dep> -0.5 </dep></entry>
@@ -63,4 +71,3 @@
   </animation>
 
 </PropertyList>
-

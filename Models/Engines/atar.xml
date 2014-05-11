@@ -7,6 +7,7 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>atar</object-name>
+    <object-name>intatar</object-name>
     <object-name>helice1</object-name>
     <object-name>helice1</object-name>
 

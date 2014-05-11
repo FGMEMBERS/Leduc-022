@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -125,12 +125,6 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
   <effect>
@@ -163,6 +157,17 @@
     <object-name>verriere</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Leduc-022/Models/Effects/Glass/glass</inherits-from>
+    <object-name>verriere</object-name>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>verriere</object-name>
+  </effect>
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Leduc-022/Models/shadow.xml</path>
@@ -185,13 +190,13 @@
       <x-m> -0.004 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -0.595 </z-m>
-      <pitch-deg>  -2 </pitch-deg>
+      <pitch-deg> -2 </pitch-deg>
     </offsets>
   </model>
 
   <!-- Flamme de l'Atar -->
   <model>
-    <path>Aircraft/Leduc-022/Models/Effects/flammes/flammes1.xml</path>
+    <path>Aircraft/Leduc-022/Models/Effects/flammes/atarcombustion.xml</path>
     <offsets>
       <x-m>  1.87513 </x-m>
       <y-m>  0.00000 </y-m>
@@ -201,7 +206,7 @@
 
   <!-- Flamme du statoreacteur -->
   <model>
-    <path>Aircraft/Leduc-022/Models/Effects/flammes/flammes2.xml</path>
+    <path>Aircraft/Leduc-022/Models/Effects/flammes/statocombustion.xml</path>
     <offsets>
       <x-m>  7.26734 </x-m>
       <y-m>  0.00000 </y-m>
@@ -841,9 +846,23 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>CanopyComplete</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>translate</type>
     <object-name>CanopyComplete</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0.0 </dep></entry>
       <entry><ind> 1 </ind><dep> -0.5 </dep></entry>
@@ -856,4 +875,3 @@
   </animation>
 
 </PropertyList>
-
